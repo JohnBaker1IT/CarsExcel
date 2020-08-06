@@ -20,14 +20,14 @@ public class ExcelToCsv {
 
     public static void echoAsCSV(Sheet sheet) throws IOException {
     	//Instantiating the CSVWriter class
-        CSVWriter writer = new CSVWriter(new FileWriter("C:\\Users\\AndyY\\git\\CsvExcel\\CsvToExcel\\config\\output.csv"));
+        CSVWriter writer = new CSVWriter(new FileWriter("C:\\Users\\AndyY\\git\\CarsExcel\\ExcelToCsv\\config\\output.csv"));
         //Writing data to a csv file
         
     	
     	Row row = null;
         for (int i = 0; i < sheet.getLastRowNum(); i++) {
             row = sheet.getRow(i);
-            for (int j = 0; j < row.getLastCellNum(); j++) {
+            for (int j = 0; j < row.getLastCellNum(); j++) { //
             	String line[] = {"\"" + row.getCell(j) + "\","};
             	writer.writeNext(line);
             	
@@ -42,7 +42,7 @@ public class ExcelToCsv {
     public static void main(String[] args) {
         InputStream inp = null;
         try {
-            inp = new FileInputStream("C:\\Users\\AndyY\\git\\CsvExcel\\CsvToExcel\\config\\EXCEL_DATA.xlsx");
+            inp = new FileInputStream("C:\\Users\\AndyY\\git\\CarsExcel\\ExcelToCsv\\config\\EXCEL_DATA.xlsx");
             Workbook wb = WorkbookFactory.create(inp);
 
             for(int i=0;i<wb.getNumberOfSheets();i++) {
