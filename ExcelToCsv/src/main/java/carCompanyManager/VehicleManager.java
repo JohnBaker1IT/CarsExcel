@@ -6,11 +6,55 @@ import java.util.List;
 import java.util.ListIterator;
 
 import carCompanyManagerModel.Vehicle;
+import carCompanyManagerModel.VehicleType;
+import carCompanyManagerModel.VehicleTypesInfoPrint;
 import carCompanyManagerModel.VehiclesInfoPrint;
 
 import java.text.NumberFormat;
 
 public class VehicleManager {
+	
+	private static final Vehicle vehicle1 = null;
+	
+	static List<Vehicle> vehicles = new LinkedList<>();  //PPT3 Array List to store all Bank Account Objects
+	
+public static Vehicle createVehicle (String name) {
+		
+		Vehicle vehicle = new Vehicle();
+		vehicles.add(vehicle);
+		vehicle.setCarModel(name);
+		List<String> addresses = List.of("124 Mulberry St.", "109 Cherry St.");
+		vehicle.setAddresses(addresses);
+		vehicle.mapAdd(vehicle.getCarModel(), vehicle.getAddresses());
+	
+		
+		return vehicle;
+		
+	}
+
+public static void printVehicleInfo() {
+	
+	 System.out.println(vehicle1);
+     
+     VehiclesInfoPrint vehiclesInfoPrint = new VehiclesInfoPrint();
+     vehiclesInfoPrint.getBankAccounts(vehicles);
+	 
+	 
+        System.out.println(""); 
+        System.out.println("Above is the Bank Account in list"); 	
+        System.out.println("");
+	
+	
+	
+	double intf = 100.05;
+	NumberFormat defaultFormat = NumberFormat.getCurrencyInstance();
+	
+	System.out.println("Added with interface: " + defaultFormat.format(intf)); 
+	
+	
+	
+}
+	
 
 	public static void main(String[] args) {
 
@@ -18,14 +62,8 @@ public class VehicleManager {
         
        
 		
-		List<Vehicle> vehicles = new LinkedList<>();  //PPT3 Array List to store all Bank Account Objects
+		createVehicle ("GLC 330D");
 		
-		Vehicle vehicle1 = new Vehicle();
-		vehicles.add(vehicle1);
-		vehicle1.setCarModel("GLC 330D");
-		List<String> addresses = List.of("124 Mulberry St.", "109 Cherry St.");
-		vehicle1.setAddresses(addresses);
-		vehicle1.mapAdd(vehicle1.getCarModel(), vehicle1.getAddresses());
 		
 		Vehicle vehicle2 = new Vehicle();
 		vehicles.add(vehicle2);
@@ -41,24 +79,9 @@ public class VehicleManager {
 		vehicle3.setAddresses(addresses3);
 		vehicle3.mapAdd(vehicle3.getCarModel(), vehicle3.getAddresses());
 		
-		 System.out.println(vehicle1);
-	        
-	     VehiclesInfoPrint vehiclesInfoPrint = new VehiclesInfoPrint();
-	     vehiclesInfoPrint.getBankAccounts(vehicles);
-		 
-		 
-	        System.out.println(""); 
-	        System.out.println("Above is the Bank Account in list"); 	
-	        System.out.println("");
 		
 		
-		
-		double intf = 100.05;
-		NumberFormat defaultFormat = NumberFormat.getCurrencyInstance();
-		
-		System.out.println("Added with interface: " + defaultFormat.format(intf)); 
-		
-		
+		printVehicleInfo();
 
 		
 		

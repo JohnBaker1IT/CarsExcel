@@ -13,14 +13,9 @@ public class CarCompany extends CarCompanies{    // PPT  Abstract classes can ha
 	private String gender = "Male"; //PPT 1  Set to private to encapsulate getters and setters
 	private int age = 40;
 	private List<String> addresses = new LinkedList<>();
-	private List<VehicleType> vehicleTypes = new LinkedList<>();
+	public List<VehicleType> vehicleTypes = new LinkedList<>();
 	
-	public List<VehicleType> getVehicleTypes() {
-		return vehicleTypes;
-	}
-	public void setVehicleTypes(List<VehicleType> vehicleTypes) {
-		this.vehicleTypes = vehicleTypes;
-	}
+	
 	private double balance = 3000;
 	
 	
