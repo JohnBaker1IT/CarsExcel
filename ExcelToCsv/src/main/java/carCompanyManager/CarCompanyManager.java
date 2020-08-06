@@ -14,7 +14,7 @@ public class CarCompanyManager {
 	
 	private static final CarCompany carCompany1 = null;
 	
-	static List<CarCompany> carCompanies = new LinkedList<>();  //PPT3 Array List to store all Bank Account Objects
+	static List<CarCompany> carCompanies = new LinkedList<>();  
 	
 	public static CarCompany createCarCompany(String name) {
 		

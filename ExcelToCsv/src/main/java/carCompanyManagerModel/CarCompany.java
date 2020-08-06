@@ -51,7 +51,7 @@ public class CarCompany extends CarCompanies{    // PPT  Abstract classes can ha
 	}
 
 	public void mapAdd(String name, List<String> addresses) {
-		ownerAddresses.put(name, addresses);
+		this.ownerAddresses.put(name, addresses);
 	}
 	
 	

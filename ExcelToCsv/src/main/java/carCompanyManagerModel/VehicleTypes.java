@@ -6,6 +6,6 @@ import java.util.Map;
 
 
 public class VehicleTypes {
-	static Map<String, List<String>> ownerAddresses = new HashMap<>();
+   static Map<String, List<String>> ownerAddresses = new HashMap<>();
 
 }

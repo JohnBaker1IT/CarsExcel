@@ -3,7 +3,7 @@ package carCompanyManagerModel;
 import java.util.List;
 import java.util.ListIterator;
 
-
+import carCompanyManagerModel.VehicleTypes;
 public class VehicleTypesInfoPrint {
 	
 	public int getBankAccounts (List<VehicleType>vehicleTypes) {
@@ -23,12 +23,12 @@ public class VehicleTypesInfoPrint {
         	System.out.println("Addresses are : "
                     + vehicleType.getAddresses());
             
-        	
+        	                                                                                      
     		System.out.println(vehicleType.getCarModel() +"'s addresses in cutomer map: " + VehicleTypes.ownerAddresses.get(vehicleType.getCarModel()));
     		
         } 
 		
-        System.out.println("Customer map: " + Vehicles.ownerAddresses);
+        System.out.println("Customer map: " + VehicleTypes.ownerAddresses);
 		
 		return 0;
 		

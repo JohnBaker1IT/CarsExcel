@@ -44,7 +44,7 @@ public class User extends Users{    // PPT  Abstract classes can have implement 
 	}
 
 	public void mapAdd(String name, List<String> addresses) {
-		ownerAddresses.put(name, addresses);
+		this.ownerAddresses.put(name, addresses);
 	}
 	
 	
