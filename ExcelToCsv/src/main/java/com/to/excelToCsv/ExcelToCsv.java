@@ -27,7 +27,7 @@ public class ExcelToCsv {
     	Row row = null;
         for (int i = 0; i < sheet.getLastRowNum(); i++) {
             row = sheet.getRow(i);
-            for (int j = 0; j < row.getLastCellNum(); j++) { //
+            for (int j = 0; j < row.getLastCellNum(); j++) { ////
             	String line[] = {"\"" + row.getCell(j) + "\","};
             	writer.writeNext(line);
             	
