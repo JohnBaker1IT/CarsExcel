@@ -14,7 +14,7 @@ public class CarCompanyManager {
 	
 	private static final CarCompany carCompany1 = null;
 	
-	static List<CarCompany> carCompanies = new LinkedList<>();  
+	public static List<CarCompany> carCompanies = new LinkedList<>();  
 	
 	public static CarCompany createCarCompany(String name) {
 		
@@ -54,23 +54,7 @@ public class CarCompanyManager {
 
 	public static void main(String[] args) {
 
-		CarCompany carCompany1 = createCarCompany("Mercedes-Benz");
 		
-		
-		
-		CarCompany carCompany2 = new CarCompany();
-		carCompanies.add(carCompany2);
-		carCompany2.setCompanyName("BMW");
-		List<String> addresses2 = List.of("125 Mulberry St.", "110 Cherry St.");
-		carCompany2.setAddresses(addresses2);
-		carCompany2.mapAdd(carCompany2.getCompanyName(), carCompany2.getAddresses());
-		
-		CarCompany carCompany3 = new CarCompany();
-		carCompanies.add(carCompany3);
-		carCompany3.setCompanyName("Acura");
-		List<String> addresses3 = List.of("126 Mulberry St.", "111 Cherry St.");//
-		carCompany3.setAddresses(addresses3);
-		carCompany3.mapAdd(carCompany3.getCompanyName(), carCompany3.getAddresses());
 		
 		
 		printCompanyInfo();
