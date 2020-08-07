@@ -11,7 +11,7 @@ public class VehicleType extends VehicleTypes{    // PPT  Abstract classes can h
 	
 	private String carModel = "Tom";   // Initialize the Bank Account super class
 	private String gender = "Male"; //PPT 1  Set to private to encapsulate getters and setters
-	private int age = 40;
+	private int quantity = 0;
 	private List<String> addresses = new LinkedList<>();
 	private double balance = 3000;
 	public List<Vehicle> vehicles = new LinkedList<>();
@@ -30,11 +30,11 @@ public class VehicleType extends VehicleTypes{    // PPT  Abstract classes can h
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-	public int getAge() {
-		return age;
+	public int getQuantity() {
+		return quantity;
 	}
-	public void setAge(int age) {
-		this.age = age;
+	public void setQuantity(int inc) {
+		this.quantity = this.quantity + inc;
 	}
 	public List<String> getAddresses() {
 		return addresses;
